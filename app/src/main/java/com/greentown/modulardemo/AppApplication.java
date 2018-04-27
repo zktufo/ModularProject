@@ -2,6 +2,7 @@ package com.greentown.modulardemo;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.greentown.baselib.base.BaseApplication;
+import com.greentown.commonbusiness.Router;
 import com.greentown.commonbusiness.UserHelper;
 
 /**
@@ -19,5 +20,7 @@ public class AppApplication extends BaseApplication {
         }
         UserHelper.init(this);
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
+        Router.getInstance().registerComponent("com.greentown.module2.Module2AppLike");
+
     }
 }

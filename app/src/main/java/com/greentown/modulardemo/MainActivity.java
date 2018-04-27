@@ -2,12 +2,19 @@ package com.greentown.modulardemo;
 
 import android.support.annotation.NonNull;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.greentown.baselib.base.BaseActivity;
+import com.greentown.commonbusiness.Router;
+import com.greentown.commonservice.module2.Module2PageListService;
 
 public class MainActivity extends BaseActivity {
 
+
+    LinearLayout rootLayout;
+    Module2PageListService service = (Module2PageListService) Router.getInstance().getService(Module2PageListService.class.getSimpleName());
 
     @NonNull
     @Override
@@ -17,6 +24,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView() {
+
+        rootLayout = $(R.id.fl_root);
+
 
         $(R.id.btn_module1).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +43,11 @@ public class MainActivity extends BaseActivity {
                         .navigation();
             }
         });
+
+        ((TextView) $(R.id.txt_city)).setText(service.getCurrentCity());
+
+
+        rootLayout.addView(service.getPageList(1, this));
     }
 
 }

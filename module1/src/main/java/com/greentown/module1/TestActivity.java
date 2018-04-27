@@ -3,11 +3,14 @@ package com.greentown.module1;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.greentown.baselib.base.BaseActivity;
+import com.greentown.commonbusiness.Router;
 import com.greentown.commonbusiness.UserHelper;
+import com.greentown.commonservice.module2.Module2PageListService;
 
 /**
  * @author zhengkaituo
@@ -17,6 +20,7 @@ import com.greentown.commonbusiness.UserHelper;
 public class TestActivity extends BaseActivity {
 
     Button btnLogin;
+    Module2PageListService service = (Module2PageListService) Router.getInstance().getService(Module2PageListService.class.getSimpleName());
 
     @NonNull
     @Override
@@ -54,6 +58,8 @@ public class TestActivity extends BaseActivity {
                 ARouter.getInstance().build("/common/register").navigation();
             }
         });
+
+        ((LinearLayout) $(R.id.ll_root)).addView(service.getPageList(1, this));
     }
 
 
