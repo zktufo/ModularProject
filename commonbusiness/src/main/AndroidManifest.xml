@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.greentown.commonbusiness">
+
+    <application>
+        <activity android:name="com.greentown.usercom.RegisterActivity"/>
+        <activity android:name="com.greentown.usercom.LoginActivity"/>
+    </application>
+</manifest>
