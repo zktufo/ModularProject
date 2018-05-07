@@ -1,10 +1,10 @@
-apply plugin:'com.greentown.comgradle'
+apply plugin: 'com.leozkt.comgradle'
 
 //apply plugin:'com.android.application'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.greentown.modulardemo"
+        applicationId "com.leozkt.modulardemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -13,7 +13,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -34,7 +34,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile project (':commonbusiness')
+    compile project(':commonbusiness')
 //    implementation project(':Module1')
     compile 'com.alibaba:arouter-api:1.3.1'
 //    runtimeOnly project (":Module1")

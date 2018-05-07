@@ -6,7 +6,7 @@ repositories{
     mavenCentral()
 }
 
-group='com.greentown.buildgradle.plugin'
+group='com.leozkt.buildgradle.plugin'
 version ='1.0.0'
 
 

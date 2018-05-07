@@ -1,5 +1,5 @@
-apply plugin:'com.greentown.comgradle'
-
+apply plugin:'com.leozkt.comgradle'
+//apply plugin:'com.android.library'
 
 android {
 
@@ -32,9 +32,9 @@ android {
     }
 
 }
-combuild {
-    applicationName = 'com.greentown.module1.runalone.Module1Application'
-}
+//combuild {
+//    applicationName = 'com.leozkt.module1.runalone.Module1Application'
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

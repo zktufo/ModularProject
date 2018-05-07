@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.greentown.module2">
+          package="com.leozkt.module2">
 
     <application
         android:allowBackup="true"

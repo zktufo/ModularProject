@@ -1,4 +1,4 @@
-package com.greentown.usercom;
+package com.leozkt.usercom;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.greentown.usercom.test", appContext.getPackageName());
+        assertEquals("com.leozkt.usercom.test", appContext.getPackageName());
     }
 }

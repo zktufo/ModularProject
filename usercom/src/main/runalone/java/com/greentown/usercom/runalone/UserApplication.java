@@ -1,9 +1,9 @@
-package com.greentown.usercom.runalone;
+package com.leozkt.usercom.runalone;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.greentown.baselib.base.BaseApplication;
-import com.greentown.commonbusiness.UserHelper;
-import com.greentown.usercom.BuildConfig;
+import com.leozkt.baselib.base.BaseApplication;
+import com.leozkt.commonbusiness.UserHelper;
+import com.leozkt.usercom.BuildConfig;
 
 /**
  * @author zhengkaituo
